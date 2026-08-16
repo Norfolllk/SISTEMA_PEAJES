@@ -157,3 +157,6 @@ public class TestVehiculoAI {
 		assertEquals(0, destino.getSaldo(), 0.0001);
 	}
 }
+
+//Prompt mejorado: Para los métodos de negocio, como cada uno devuelve boolean o null en vez de lanzar excepción, necesito probar dos caminos por método: un caso donde la validación pasa (ejemplo: monto positivo, tipo correcto, saldo suficiente) y un caso donde la validación falla (monto negativo, tipo inválido, saldo insuficiente). Así compruebo que el if/else de cada método realmente funciona en ambas direcciones, no solo en el camino feliz.
+//Para el caso inválido de cobrarPeaje, necesito un vehículo con tag en saldo 0.0 recién creado — no puedo reutilizar el tag que ya recargué antes, porque tendría saldo de sobra y el caso no fallaría
